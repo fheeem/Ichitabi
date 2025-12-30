@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: ichitabi
+
+  devtools:
+    livereload:
+      enabled: true
+
+  datasource:
+    driver-class-name: ${DB_DRIVER}
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+
+  servlet:
+    multipart:
+      maxFileSize: 20MB
+      maxRequestSize: 100MB
+
+file:
+  upload:
+    itemImgLocation: C:/shop/item
+    uploadPath: file:///C:/shop/
+
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  config-location: classpath:mybatis-config.xml
