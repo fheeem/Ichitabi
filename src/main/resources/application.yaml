@@ -6,6 +6,9 @@ spring:
     livereload:
       enabled: true
 
+  config:
+    import: optional:classpath:application-env.properties
+
   datasource:
     driver-class-name: ${DB_DRIVER}
     url: ${DB_URL}

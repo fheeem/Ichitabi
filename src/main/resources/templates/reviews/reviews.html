@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ICHITABI - 당신의 가장 좋았던 일본을 공유해주세요</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/reviews_list.css" />
+  </head>
+  <body>
+    <div id="header"></div>
+    <div id="wrapper">
+      <div id="bread-crumb">
+        <p><img src="../resources/icons/home.png" alt="home" id="home" /></p>
+        <p>></p>
+        <p id="recommend">여행지 추천</p>
+      </div>
+      <div id="review-div">
+        <ul id="review-ul"></ul>
+      </div>
+      <div id="more-btn"><button>더 보기</button></div>
+    </div>
+    <div id="floating-btn"></div>
+    <div id="footer"></div>
+
+    <template id="reviews-template">
+      <li class="review-list">
+        <a href="">
+          <p>
+            <img class="photo" />
+          </p>
+          <div class="age-gender">
+            <p class="age"></p>
+            <p class="gender"></p>
+          </div>
+          <p class="title"></p>
+          <p class="place"></p>
+          <p class="hash"></p>
+        </a>
+        <p class="favo"><button>찜</button></p>
+      </li>
+    </template>
+    <script type="module" src="../js/reviews_list.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/util.js"></script>
+  </body>
+</html>

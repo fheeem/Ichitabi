@@ -1,0 +1,183 @@
+@charset "utf-8";
+
+#title {
+  margin-top: 100px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+#login-container {
+  width: 500px;
+  margin: 0 auto;
+  margin-bottom: 200px;
+  color: #212121;
+}
+#login-container input[type='text'],
+#login-container input[type='password'] {
+  width: 500px;
+  height: 50px;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #212121;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+#login-container input[type='text'] {
+  margin-bottom: 16px;
+}
+#login-container input[type='password'] {
+  margin-bottom: 15px;
+}
+
+.password-wrapper {
+  position: relative;
+}
+.pw-toggle-btn {
+  position: absolute;
+  right: 15px;
+  top: 16%;
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+  cursor: pointer;
+}
+.pw-toggle-btn.hidden {
+  background-image: url('/resources/icons/hidden.png');
+}
+
+.pw-toggle-btn.visible {
+  background-image: url('/resources/icons/eye.png');
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.checkbox-container input[type='checkbox'] {
+  margin-right: 5px;
+}
+.checkbox-container .checkbox-label {
+  position: relative;
+  top: -7px;
+  font-size: 14px;
+  color: #212121;
+}
+
+.loginBtn {
+  width: 500px;
+  height: 50px;
+  font-size: 18px;
+  font-weight: 400;
+  background-color: #113062;
+  border: 2px solid #212121;
+  border-radius: 12px;
+  color: aliceblue;
+  cursor: pointer;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  background-color: white;
+  padding: 40px 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+.modal-content p {
+  font-size: 18px;
+  color: #212121;
+  margin-bottom: 20px;
+}
+.modal-content button {
+  padding: 10px 20px;
+  font-size: 14px;
+  background-color: #113062;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+.links a {
+  color: #212121;
+}
+
+#signup-container {
+  width: 500px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  text-align: center;
+  color: #212121;
+}
+#signup-container input[type='text'],
+#signup-container input[type='password'] {
+  width: 500px;
+  height: 50px;
+  margin-bottom: 16px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: 500;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+.genderBtn button {
+  width: 49%;
+  height: 50px;
+  font-size: 18px;
+  font-weight: 400;
+  border: none;
+  background-color: gray;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.male-Btn {
+  color: white;
+}
+.male-Btn.selected {
+  background-color: #113062;
+  border-color: #212121;
+}
+.female-Btn {
+  color: white;
+}
+.female-Btn.selected {
+  background-color: #113062;
+  border-color: #212121;
+}
+.agreement {
+  margin-top: 20px;
+  text-align: right;
+}
+.agreement input[type='checkbox'] {
+  margin-right: 4px;
+  margin-top: 6px;
+}
+.submitBtn {
+  width: 500px;
+  height: 60px;
+  font-size: 18px;
+  font-weight: 400;
+  background-color: #113062;
+  color: white;
+  border: 2px solid #212121;
+  border-radius: 8px;
+  margin-top: 30px;
+}

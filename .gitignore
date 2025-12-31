@@ -44,3 +44,4 @@ out/
 
 ### datasource env file ###
 .env
+src/main/resources/application-env.properties

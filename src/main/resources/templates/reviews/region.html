@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ICHITABI - 당신의 가장 좋았던 일본을 공유해주세요</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/region.css" />
+  </head>
+  <body>
+    <div id="header"></div>
+    <div id="wrapper">
+      <h2 class="page-title">일본의 지역</h2>
+      <ul id="regions-list">
+        <li class="hokkaido">
+          <a href="#">
+            <img
+              src="../resources/images/map_hokkaido.b7b80abd4549.svg"
+              alt="홋카이도"
+            />
+            <p class="region-name">홋카이도</p>
+          </a>
+          <ul class="cities"></ul>
+        </li>
+        <li class="tohoku">
+          <a href="#">
+            <img
+              src="../resources/images/map_tohoku.23e16b69e32c.svg"
+              alt="도호쿠"
+            />
+            <p class="region-name">도호쿠</p>
+          </a>
+          <ul class="cities">
+            <li><a href="#">아오모리</a></li>
+            <li><a href="#">아키타</a></li>
+            <li><a href="#">이와테</a></li>
+            <li><a href="#">야마가타</a></li>
+            <li><a href="#">미야기</a></li>
+            <li><a href="#">후쿠시마</a></li>
+          </ul>
+        </li>
+        <li class="hokuriku-shinetsu">
+          <a href="#">
+            <img
+              src="../resources/images/map_hokuriku.971b7d8aaf59.svg"
+              alt="호쿠리쿠 신에쓰"
+            />
+            <p class="region-name">호쿠리쿠 신에쓰</p>
+          </a>
+          <ul class="cities">
+            <li><a href="#">니가타</a></li>
+            <li><a href="#">도야마</a></li>
+            <li><a href="#">이시카와</a></li>
+            <li><a href="#">후쿠이</a></li>
+            <li><a href="#">나가노</a></li>
+          </ul>
+        </li>
+        <li class="kanto">
+          <a href="./map.html">
+            <img
+              src="../resources/images/map_kanto.5c4544e53975.svg"
+              alt="간토"
+            />
+            <p class="region-name">간토</p>
+          </a>
+          <ul class="cities">
+            <li><a href="#">도쿄</a></li>
+            <li><a href="#">가나가와</a></li>
+            <li><a href="#">지바</a></li>
+            <li><a href="#">사이타마</a></li>
+            <li><a href="#">이바라키</a></li>
+            <li><a href="#">도치기</a></li>
+            <li><a href="#">군마</a></li>
+          </ul>
+        </li>
+        <li class="tokai">
+          <a href="#">
+            <img
+              src="../resources/images/map_chubu.5b6f65f92ac3.svg"
+              alt="도카이"
+            />
+            <p class="region-name">도카이</p>
+          </a>
+          <ul class="cities">
+            <li><a href="#">야마나시</a></li>
+            <li><a href="#">시즈오카</a></li>
+            <li><a href="#">기후</a></li>
+            <li><a href="#">아이치</a></li>
+            <li><a href="#">미에</a></li>
+          </ul>
+        </li>
+        <li class="kansai">
+          <a href="#">
+            <img
+              src="../resources/images/map_kansai.93e83e6aaa46.svg"
+              alt="간사이"
+            />
+            <p class="region-name">간사이</p>
+          </a>
+          <ul class="cities">
+            <li><a href="#">교토</a></li>
+            <li><a href="#">오사카</a></li>
+            <li><a href="#">시가</a></li>
+            <li><a href="#">효고</a></li>
+            <li><a href="#">나라</a></li>
+            <li><a href="#">와카야마</a></li>
+          </ul>
+        </li>
+        <li class="chugoku">
+          <a href="#">
+            <img
+              src="../resources/images/map_chugoku.702fcee42844.svg"
+              alt="주고쿠"
+            />
+            <p class="region-name">주고쿠</p>
+          </a>
+          <ul class="cities">
+            <li><a href="#">돗토리</a></li>
+            <li><a href="#">시마네</a></li>
+            <li><a href="#">오카야마</a></li>
+            <li><a href="#">히로시마</a></li>
+            <li><a href="#">야마구치</a></li>
+          </ul>
+        </li>
+        <li class="shikoku">
+          <a href="#">
+            <img
+              src="../resources/images/map_shikoku.8f9ef0eea1eb.svg"
+              alt="시코쿠"
+            />
+            <p class="region-name">시코쿠</p>
+          </a>
+          <ul class="cities">
+            <li><a href="#">도쿠시마</a></li>
+            <li><a href="#">가가와</a></li>
+            <li><a href="#">에히메</a></li>
+            <li><a href="#">고치</a></li>
+          </ul>
+        </li>
+        <li class="kyushu">
+          <a href="#">
+            <img
+              src="../resources/images/map_kyushu.e2ab055eccbf.svg"
+              alt="규슈"
+            />
+            <p class="region-name">규슈</p>
+          </a>
+          <ul class="cities">
+            <li><a href="#">후쿠오카</a></li>
+            <li><a href="#">사가</a></li>
+            <li><a href="#">나가사키</a></li>
+            <li><a href="#">오이타</a></li>
+            <li><a href="#">구마모토</a></li>
+            <li><a href="#">미야자키</a></li>
+            <li><a href="#">가고시마</a></li>
+          </ul>
+        </li>
+        <li class="okinawa">
+          <a href="#">
+            <img
+              src="../resources/images/map_okinawa.83b83fa44d8c.svg"
+              alt="오키나와"
+            />
+            <p class="region-name">오키나와</p>
+            <ul class="cities"></ul>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div id="floating-btn"></div>
+    <div id="footer"></div>
+    <script src="../js/util.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/region.js"></script>
+  </body>
+</html>
