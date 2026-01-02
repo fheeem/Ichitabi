@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="../css/user.css" />
   </head>
   <body>
-    <div id="header"></div>
+    <div id="header" th:insert="~{fragment/header::header}"></div>
     <h2 id="title">로그인</h2>
     <div id="login-container">
       <input type="text" id="login-id" placeholder="이메일" />
@@ -41,7 +41,7 @@
         <button id="close-modal">닫기</button>
       </div>
     </div>
-    <div id="footer"></div>
+    <div id="footer" th:insert="~{fragment/footer::footer}"></div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="../js/common.js"></script>
     <script src="../js/user.js"></script>

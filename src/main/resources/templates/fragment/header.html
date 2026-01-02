@@ -1,6 +1,6 @@
 <header th:fragment="header">
   <div id="header-wrapper">
-    <a id="ichitabi-logo" href="../index.html">
+    <a id="ichitabi-logo" href="/">
       <h1>ICHITABI</h1>
     </a>
     <div class="header-right">
@@ -10,10 +10,10 @@
           <button id="search-top">검색</button>
         </li>
         <li id="sign-in">
-          <a href="../user/sign_in.html">로그인</a>
+          <a href="/user/login">로그인</a>
         </li>
         <li id="sign-up">
-          <a href="../user/sign_up.html">회원가입</a>
+          <a href="/user/signup">회원가입</a>
         </li>
         <li id="log-out">
           <a href="#">로그아웃</a>
@@ -24,10 +24,10 @@
   <nav class="gnb">
     <ul>
       <li id="region-btn">
-        <a href="../reviews/region.html">일본의 지역</a>
+        <a href="/region/list">일본의 지역</a>
       </li>
       <li><p class="seperator"></p></li>
-      <li><a href="../reviews/reviews.html">여행지 추천</a></li>
+      <li><a href="/review/reviews">여행지 추천</a></li>
       <li><p class="seperator"></p></li>
       <li><a href="#">시기별 축제</a></li>
     </ul>
@@ -61,7 +61,7 @@
           </ul>
         </li>
         <li class="kanto">
-          <a href="../reviews/map.html">
+          <a href="/region/detail/kanto">
             <p class="region-name">간토</p>
           </a>
           <ul class="cities">

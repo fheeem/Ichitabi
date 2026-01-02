@@ -28,7 +28,7 @@
   width: 18px;
   height: 18px;
   margin-top: 3px;
-  background-image: url('../resources/icons/home.png');
+  background-image: url('/icons/home.png');
   background-repeat: no-repeat;
   background-size: cover;
   text-indent: -999999px;
@@ -54,10 +54,10 @@
   text-indent: -999999px;
 }
 #edit-btn {
-  background-image: url(../resources/icons/edit.png);
+  background-image: url(/icons/edit.png);
 }
 #delete-btn {
-  background-image: url(../resources/icons/delete.png);
+  background-image: url(/icons/delete.png);
 }
 
 #main1 {
@@ -116,7 +116,7 @@
   width: 100%;
   height: 240px;
   background-color: #f5f5f5;
-  background-image: url('../resources/icons/image.png');
+  background-image: url('/icons/image.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 30px auto;
@@ -230,16 +230,16 @@
   background-position: center;
 }
 #like-btn {
-  background-image: url(../resources/icons/heart.png);
+  background-image: url(/icons/heart.png);
   background-size: 24px auto;
 }
 
 #like-btn.on {
-  background-image: url(../resources/icons/redheart.png);
+  background-image: url(/icons/redheart.png);
 }
 
 #share-btn {
-  background-image: url(../resources/icons/share.png);
+  background-image: url(/icons/share.png);
   background-size: 20px auto;
 }
 

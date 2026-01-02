@@ -10,19 +10,19 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../css/reset.css" />
-    <link rel="stylesheet" href="../css/common.css" />
-    <link rel="stylesheet" href="../css/review_map.css" />
-    <link rel="stylesheet" href="../css/reviews_list.css" />
+    <link rel="stylesheet" th:href="@{/css/reset.css}" />
+    <link rel="stylesheet" th:href="@{/css/common.css}" />
+    <link rel="stylesheet" th:href="@{/css/review_map.css}" />
+    <link rel="stylesheet" th:href="@{/css/reviews_list.css}" />
   </head>
   <body>
-    <div id="header"></div>
+    <div id="header" th:insert="~{fragment/header::header}"></div>
     <div id="region-photo">
       <div class="carousel">
         <ul class="carousel-item">
-          <li><img src="../resources/images/kanto_01.webp" alt="" /></li>
-          <li><img src="../resources/images/kanto_02.jpg" alt="" /></li>
-          <li><img src="../resources/images/kanto_03.webp" alt="" /></li>
+          <li><img src="/images/kanto_01.webp" alt="" /></li>
+          <li><img src="/images/kanto_02.jpg" alt="" /></li>
+          <li><img src="/images/kanto_03.webp" alt="" /></li>
         </ul>
       </div>
       <p id="region-title">일본의 중심 - 관동지방</p>
@@ -37,7 +37,7 @@
           <p>&gt;</p>
         </li>
         <li class="btn-region">
-          <a href="./region.html">일본의 지역</a>
+          <a href="region.html">일본의 지역</a>
         </li>
         <li class="seperator">
           <p>&gt;</p>
@@ -490,10 +490,10 @@
         <div id="review-div">
           <ul>
             <li class="review-list">
-              <a href="./detail.html">
+              <a href="/review/detail">
                 <p class="photo">
                   <img
-                    src="../resources/images/reviewList01.jpeg"
+                    src="/images/reviewList01.jpeg"
                     alt="마루시치 긴자점"
                   />
                 </p>
@@ -508,7 +508,7 @@
               <a href="">
                 <p class="photo">
                   <img
-                    src="../resources/images/reviewList02.jpeg"
+                    src="/images/reviewList02.jpeg"
                     alt="긴자 스시 후쿠쥬"
                   />
                 </p>
@@ -523,7 +523,7 @@
               <a href="">
                 <p class="photo">
                   <img
-                    src="../resources/images/reviewList03.jpeg"
+                    src="/images/reviewList03.jpeg"
                     alt="우설 전문점 네기시 도겐자카점(ねぎし)"
                   />
                 </p>
@@ -538,7 +538,7 @@
               <a href="">
                 <p class="photo">
                   <img
-                    src="../resources/images/reveiwList07.jpeg"
+                    src="/images/reveiwList07.jpeg"
                     alt="카사이 린카이 수족관"
                   />
                 </p>
@@ -553,7 +553,7 @@
               <a href="">
                 <p class="photo">
                   <img
-                    src="../resources/images/reviewList04.jpeg"
+                    src="/images/reviewList04.jpeg"
                     alt="오니버스 커피"
                   />
                 </p>
@@ -568,7 +568,7 @@
               <a href="">
                 <p class="photo">
                   <img
-                    src="../resources/images/reviewList05.jpeg"
+                    src="/images/reviewList05.jpeg"
                     alt="spring valley brewery"
                   />
                 </p>
@@ -585,7 +585,7 @@
               <a href="">
                 <p class="photo">
                   <img
-                    src="../resources/images/reviewList06.jpeg"
+                    src="/images/reviewList06.jpeg"
                     alt="bellustar"
                   />
                 </p>
@@ -600,7 +600,7 @@
               <a href="">
                 <p class="photo">
                   <img
-                    src="../resources/images/reviewList08.png"
+                    src="/images/reviewList08.png"
                     alt="요요기공원(代々木公園)"
                   />
                 </p>
@@ -617,10 +617,10 @@
       <!-- E. 세부 지역 게시글 영역 -->
     </div>
     <div id="floating-btn"></div>
-    <div id="footer"></div>
-    <script src="../js/util.js"></script>
-    <script src="../js/common.js"></script>
-    <script src="../js/review_map.js"></script>
-    <script src="../js/reviews_list.js"></script>
+    <div id="footer" th:insert="~{fragment/footer::footer}"></div>
+    <script th:src="@{/js/util.js}"></script>
+    <script th:src="@{/js/common.js}"></script>
+    <script th:src="@{/js/review_map.js}"></script>
+    <script th:src="@{/js/reviews_list.js}"></script>
   </body>
 </html>

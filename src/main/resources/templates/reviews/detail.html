@@ -10,30 +10,30 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../css/reset.css" />
-    <link rel="stylesheet" href="../css/common.css" />
-    <link rel="stylesheet" href="../css/review_detail.css" />
+    <link rel="stylesheet" th:href="@{/css/reset.css}" />
+    <link rel="stylesheet" th:href="@{/css/common.css}" />
+    <link rel="stylesheet" th:href="@{/css/review_detail.css}" />
   </head>
 
   <body>
-    <div id="header"></div>
+    <div id="header" th:insert="~{fragment/header::header}"></div>
     <div id="wrapper">
       <div id="location">
         <ul>
           <li class="btn-home">
-            <a href="../index.html">홈</a>
+            <a href="/">홈</a>
           </li>
           <li class="seperator">
             <p>&gt;</p>
           </li>
           <li class="location-detail">
-            <a href="../index.html#map">일본 전국</a>
+            <a href="/">일본 전국</a>
           </li>
           <li class="seperator">
             <p>&gt;</p>
           </li>
           <li class="location-detail">
-            <a href="../reviews/map.html#map">관동지방</a>
+            <a href="/region/detail/kanto">관동지방</a>
           </li>
           <li class="seperator">
             <p>&gt;</p>
@@ -117,7 +117,7 @@
       <ul id="recommend-ul"></ul>
     </div>
     <div id="floating-btn"></div>
-    <div id="footer"></div>
+    <div id="footer" th:insert="~{fragment/footer::footer}"></div>
 
     <template id="recommend-template">
       <li class="recommend-list">
@@ -131,8 +131,8 @@
         </a>
       </li>
     </template>
-    <script type="module" src="../js/review_detail.js"></script>
-    <script src="../js/common.js"></script>
-    <script src="../js/util.js"></script>
+    <script type="module" th:src="@{/js/review_detail.js}"></script>
+    <script th:src="@{/js/common.js}"></script>
+    <script th:src="@{/js/util.js}"></script>
   </body>
 </html>
