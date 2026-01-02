@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../css/user.css" />
   </head>
   <body>
-    <div id="header"></div>
+    <div id="header" th:insert="~{fragment/header::header}"></div>
     <h2 id="title">회원가입</h2>
     <div id="signup-container">
       <input type="text" id="email" placeholder="이메일" />
@@ -50,7 +50,7 @@
       </div>
       <button class="submitBtn">회원가입</button>
     </div>
-    <div id="footer"></div>
+    <div id="footer" th:insert="~{fragment/footer::footer}"></div>
     <script src="../js/user.js"></script>
     <script src="../js/common.js"></script>
     <script src="../js/util.js"></script>

@@ -10,13 +10,13 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../css/reset.css" />
-    <link rel="stylesheet" href="../css/common.css" />
-    <link rel="stylesheet" href="../css/review_write.css" />
+    <link rel="stylesheet" th:href="@{/css/reset.css}" />
+    <link rel="stylesheet" th:href="@{/css/common.css}" />
+    <link rel="stylesheet" th:href="@{/css/review_write.css}" />
   </head>
 
   <body>
-    <div id="header"></div>
+    <div id="header" th:insert="~{fragment/header::header}"></div>
     <div id="wrapper">
       <h1>당신의 여행을 알려주세요!</h1>
       <div class="row">
@@ -191,9 +191,9 @@
       </div>
       <div id="main8"><button onclick="confirmAction()">작성</button></div>
     </div>
-    <div id="footer"></div>
-    <script src="../js/review_write.js"></script>
-    <script src="../js/common.js"></script>
-    <script src="../js/util.js"></script>
+    <div id="footer" th:insert="~{fragment/footer::footer}"></div>
+    <script th:src="@{/js/review_write.js}"></script>
+    <script th:src="@{/js/common.js}"></script>
+    <script th:src="@{/js/util.js}"></script>
   </body>
 </html>

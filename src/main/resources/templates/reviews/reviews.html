@@ -10,12 +10,12 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../css/reset.css" />
-    <link rel="stylesheet" href="../css/common.css" />
-    <link rel="stylesheet" href="../css/reviews_list.css" />
+    <link rel="stylesheet" th:href="@{/css/reset.css}" />
+    <link rel="stylesheet" th:href="@{/css/common.css}" />
+    <link rel="stylesheet" th:href="@{/css/reviews_list.css}" />
   </head>
   <body>
-    <div id="header"></div>
+    <div id="header" th:insert="~{fragment/header::header}"></div>
     <div id="wrapper">
       <div id="bread-crumb">
         <p><img src="../resources/icons/home.png" alt="home" id="home" /></p>
@@ -28,7 +28,7 @@
       <div id="more-btn"><button>더 보기</button></div>
     </div>
     <div id="floating-btn"></div>
-    <div id="footer"></div>
+    <div id="footer" th:insert="~{fragment/footer::footer}"></div>
 
     <template id="reviews-template">
       <li class="review-list">
@@ -47,8 +47,8 @@
         <p class="favo"><button>찜</button></p>
       </li>
     </template>
-    <script type="module" src="../js/reviews_list.js"></script>
-    <script src="../js/common.js"></script>
-    <script src="../js/util.js"></script>
+    <script type="module" th:src="@{/js/reviews_list.js}"></script>
+    <script th:src="@{/js/common.js}"></script>
+    <script th:src="@{/js/util.js}"></script>
   </body>
 </html>

@@ -54,7 +54,7 @@
   width: 28px;
   height: 28px;
   text-indent: -999999px;
-  background-image: url('../resources/icons/magnifying-glass.png');
+  background-image: url('/icons/magnifying-glass.png');
   background-size: cover;
 }
 
