@@ -44,7 +44,11 @@
           <p>#공원</p>
         </div>
         <div id="review-div">
-          <ul id="review-ul"></ul>
+          <ul id="review-ul">
+            <th:block th:each="review : ${reviewList}">
+              <li th:replace="~{fragment/reviewItem :: reviewItem(${review})}"></li>
+            </th:block>
+          </ul>
         </div>
       </div>
       <!-- S. 축제 게시글 영역 -->
@@ -66,23 +70,6 @@
     </div>
     <div id="floating-btn"></div>
     <div id="footer" th:insert="~{fragment/footer::footer}"></div>
-    <template id="reviews-template">
-      <li class="review-list">
-        <a href="">
-          <p>
-            <img class="photo" />
-          </p>
-          <div class="age-gender">
-            <p class="age"></p>
-            <p class="gender"></p>
-          </div>
-          <p class="title"></p>
-          <p class="place"></p>
-          <p class="hash"></p>
-        </a>
-        <p class="favo"><button>찜</button></p>
-      </li>
-    </template>
     <template id="festival-item-template">
       <li class="festival-item">
         <a href="#">
