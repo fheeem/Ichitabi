@@ -51,22 +51,10 @@
   width: 18px;
   height: 18px;
   margin-top: 3px;
-  background-image: url('/icons/home.png');
+  background-image: url('../resources/icons/home.png');
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.6;
-  transition: all 0.2s ease;
   text-indent: -999999px;
-}
-
-#location .btn-home:hover a {
-  opacity: 1.0;
-}
-
-#location .btn-region:hover,
-#location .location-detail:hover {
-  font-weight: 900;
-  transition: all 0.2s ease;
 }
 
 #wrapper-region {
