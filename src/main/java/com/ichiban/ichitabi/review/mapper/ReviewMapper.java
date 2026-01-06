@@ -9,4 +9,6 @@ import java.util.List;
 public interface ReviewMapper {
 
     List<ReviewListDto> selectReviewList();
+
+    List<ReviewListDto> selectReviewListByHashtag(String hashtag);
 }

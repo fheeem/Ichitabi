@@ -17,4 +17,8 @@ public class ReviewService {
         return reviewMapper.selectReviewList();
     }
 
+    public List<ReviewListDto> selectReviewListByHashtag(String hashtag) {
+        return reviewMapper.selectReviewListByHashtag(hashtag);
+    }
+
 }

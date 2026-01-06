@@ -24,8 +24,7 @@
       </div>
       <div id="review-div">
           <ul id="review-ul">
-            <th:block th:each="review : ${reviewList}">
-              <li th:replace="~{fragment/reviewItem :: reviewItem(${review})}"></li>
+            <th:block th:replace="~{fragment/review_item_list :: reviewList(${reviewList})}">
             </th:block>
           </ul>
       </div>
@@ -34,6 +33,7 @@
     <div id="floating-btn"></div>
     <div id="footer" th:insert="~{fragment/footer::footer}"></div>
     <script type="module" th:src="@{/js/reviews_list.js}"></script>
+    <script th:src="@{/js/review_item.js}"></script>
     <script th:src="@{/js/common.js}"></script>
     <script th:src="@{/js/util.js}"></script>
   </body>

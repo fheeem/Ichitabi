@@ -1,10 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.favo button').forEach(btn => {
-    btn.addEventListener('click', () => {
-      btn.classList.toggle('on');
-    });
-  });
-
   const items = document.querySelectorAll('.review-list');
   const moreBtn = document.querySelector('#more-btn button');
   const SHOW_COUNT = 4;
