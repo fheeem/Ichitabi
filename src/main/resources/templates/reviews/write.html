@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ICHITABI - 당신의 가장 좋았던 일본을 공유해주세요</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" th:href="@{/css/reset.css}" />
+    <link rel="stylesheet" th:href="@{/css/common.css}" />
+    <link rel="stylesheet" th:href="@{/css/review_write.css}" />
+  </head>
+
+  <body>
+    <div id="header" th:insert="~{fragment/header::header}"></div>
+    <div id="wrapper">
+      <h1>당신의 여행을 알려주세요!</h1>
+      <div class="row">
+        <div id="title">
+          <div id="title-left">
+            <h2>장소 이름</h2>
+            <button id="map-btn">지도</button>
+          </div>
+          <ul class="map-list">
+            <li class="japan">
+              <p>일본</p>
+            </li>
+            <p>&nbsp;>&nbsp;</p>
+            <li class="kanto">
+              <p>간토</p>
+            </li>
+            <p>&nbsp;>&nbsp;</p>
+            <li class="tokyo">
+              <p>도쿄</p>
+            </li>
+          </ul>
+        </div>
+        <div id="main1">
+          <input
+            type="text"
+            placeholder="여행한 장소의 이름을 알려주세요!"
+            id="review-name"
+            maxlength="30"
+            value=""
+          />
+          <p><span id="review-name-count">0</span> / 최대 30글자</p>
+        </div>
+      </div>
+      <div class="row">
+        <h2>평점</h2>
+        <div id="main2">
+          <p class="star">0</p>
+          <p class="star">0</p>
+          <p class="star">0</p>
+          <p class="star">0</p>
+          <p class="star">0</p>
+          <span id="star-content"></span>
+        </div>
+      </div>
+      <div class="row">
+        <h2>시기</h2>
+        <div id="main3">
+          <div class="year">
+            <select name="year">
+              <option value="none">연도 선택</option>
+              <option value="2025" class="year-selet">2025년</option>
+              <option value="2024" class="year-select">2024년</option>
+              <option value="2023" class="year-select">2023년</option>
+              <option value="2022" class="year-select">2022년</option>
+              <option value="2021" class="year-select">2021년</option>
+              <option value="2020" class="year-select">2020년</option>
+              <option value="2019" class="year-select">2019년</option>
+              <option value="2018" class="year-select">2018년</option>
+              <option value="2017" class="year-select">2017년</option>
+              <option value="2016" class="year-select">2016년</option>
+              <option value="2015" class="year-select">2015년</option>
+              <option value="2014" class="year-select">2014년</option>
+              <option value="2013" class="year-select">2013년</option>
+              <option value="2012" class="year-select">2012년</option>
+              <option value="2011" class="year-select">2011년</option>
+              <option value="2010" class="year-select">2010년</option>
+              <option value="2009" class="year-select">2010년 이전</option>
+            </select>
+          </div>
+          <div class="month">
+            <select name="month">
+              <option value="none">월 선택</option>
+              <option value="1" class="month-select">1월</option>
+              <option value="2" class="month-select">2월</option>
+              <option value="3" class="month-select">3월</option>
+              <option value="4" class="month-select">4월</option>
+              <option value="5" class="month-select">5월</option>
+              <option value="6" class="month-select">6월</option>
+              <option value="7" class="month-select">7월</option>
+              <option value="8" class="month-select">8월</option>
+              <option value="9" class="month-select">9월</option>
+              <option value="10" class="month-select">10월</option>
+              <option value="11" class="month-select">11월</option>
+              <option value="12" class="month-select">12월</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <h2>동행</h2>
+        <div id="main4">
+          <ul class="companion">
+            <li>
+              <button class="companion-btn" data-value="비즈니스">
+                비즈니스
+              </button>
+            </li>
+            <li>
+              <button class="companion-btn" data-value="단독">단독</button>
+            </li>
+            <li>
+              <button class="companion-btn" data-value="가족">가족</button>
+            </li>
+            <li>
+              <button class="companion-btn" data-value="친구">친구</button>
+            </li>
+            <li>
+              <button class="companion-btn" data-value="연인">연인</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <h2>내용</h2>
+        <div id="main5">
+          <input
+            type="text"
+            placeholder="여행한 장소를 소개 해주세요!"
+            id="review-content"
+            maxlength="300"
+            value=""
+          />
+          <p><span id="review-content-count">0</span> / 최대 300 글자</p>
+        </div>
+      </div>
+      <div class="row">
+        <h2>해시태그</h2>
+        <div id="main6-1">
+          <ul class="hashtag1">
+            <li>
+              <button class="hashtag-btn" data-value="맛집">#맛집</button>
+            </li>
+            <li>
+              <button class="hashtag-btn" data-value="카페">#카페</button>
+            </li>
+            <li>
+              <button class="hashtag-btn" data-value="야경">#야경</button>
+            </li>
+            <li>
+              <button class="hashtag-btn" data-value="공원">#공원</button>
+            </li>
+            <li>
+              <button class="hashtag-btn" data-value="테마파크">
+                #테마파크
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div id="main6-2">
+          <div id="hashtag-list"></div>
+          <div id="hashtag2">
+            <input
+              type="text"
+              placeholder="추가하고 싶은 해시태그를 작성해주세요!"
+              id="hashtag-input"
+              maxlength="30"
+              value=""
+            />
+            <button id="hashtag-add-btn">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <h2>사진 추가하기</h2>
+        <div id="main7">
+          <p>🏞️</p>
+          <p style="font-size: 13px; font-weight: 700">
+            클릭하여 사진 추가하기
+          </p>
+          <p style="font-size: 13px">또는 끌어오기</p>
+        </div>
+      </div>
+      <div id="main8"><button onclick="confirmAction()">작성</button></div>
+    </div>
+    <div id="footer" th:insert="~{fragment/footer::footer}"></div>
+    <script th:src="@{/js/review_write.js}"></script>
+    <script th:src="@{/js/common.js}"></script>
+    <script th:src="@{/js/util.js}"></script>
+  </body>
+</html>
