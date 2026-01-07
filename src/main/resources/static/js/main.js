@@ -7,29 +7,38 @@ isMainPage = true;
 //regionKanto.addEventListener('click', () => {
 //  window.location.href = './reviews/map.html';
 //});
+
 const hashs = document.querySelectorAll('#hash-div p');
 const reviewUl = document.getElementById('review-ul');
 
+async function loadReviews(hashtag, clickedHash) {
+  hashs.forEach(h => h.classList.remove('active'));
+  if (clickedHash) clickedHash.classList.add('active');
+
+  try {
+    const response = await fetch(
+      '/review/?hashtag=' + encodeURIComponent(hashtag)
+    );
+    const html = await response.text();
+    reviewUl.innerHTML = html;
+  } catch (e) {
+    console.error(e);
+  }
+}
+
 hashs.forEach(hash => {
-  hash.addEventListener('click', async () => {
-    const hashtag = hash.dataset.hash;
-
-    hashs.forEach(h => h.classList.remove('active'));
-    hash.classList.add('active');
-
-    try {
-      const response = await fetch(
-        '/review/?hashtag=' + encodeURIComponent(hashtag)
-      );
-
-      const html = await response.text();
-      reviewUl.innerHTML = html;
-
-    } catch (e) {
-      console.error(e);
-    }
+  hash.addEventListener('click', () => {
+    loadReviews(hash.dataset.hash, hash);
   });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const defaultHash = document.querySelector('#hash-div p[data-hash="맛집"]');
+  if (defaultHash) {
+    loadReviews('맛집', defaultHash);
+  }
+});
+
 
 
 seasons.forEach((season, i) => {
