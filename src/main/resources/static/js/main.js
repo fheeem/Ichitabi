@@ -7,18 +7,30 @@ isMainPage = true;
 //regionKanto.addEventListener('click', () => {
 //  window.location.href = './reviews/map.html';
 //});
-
 const hashs = document.querySelectorAll('#hash-div p');
-const seasons = document.querySelectorAll('#hash-season p');
+const reviewUl = document.getElementById('review-ul');
 
-hashs.forEach((hash, i) => {
-  hash.addEventListener('click', () => {
-    hashs.forEach((review) => {
-      review.classList.remove('active');
-    });
-    hashs[i].classList.add('active');
+hashs.forEach(hash => {
+  hash.addEventListener('click', async () => {
+    const hashtag = hash.dataset.hash;
+
+    hashs.forEach(h => h.classList.remove('active'));
+    hash.classList.add('active');
+
+    try {
+      const response = await fetch(
+        '/review/?hashtag=' + encodeURIComponent(hashtag)
+      );
+
+      const html = await response.text();
+      reviewUl.innerHTML = html;
+
+    } catch (e) {
+      console.error(e);
+    }
   });
 });
+
 
 seasons.forEach((season, i) => {
   season.addEventListener('click', () => {
