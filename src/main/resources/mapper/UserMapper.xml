@@ -18,10 +18,10 @@
     </resultMap>
 
     <select id="findByEmail" parameterType="string" resultMap="userResultMap">
-        SELECT *
-        FROM user
-        WHERE email = #{email}
-          AND deleted_at IS NULL
+        SELECT  *
+        FROM    user
+        WHERE   email = #{email}
+        AND     deleted_at IS NULL
     </select>
 
 
