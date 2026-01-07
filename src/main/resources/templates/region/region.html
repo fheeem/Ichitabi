@@ -10,19 +10,19 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../css/reset.css" />
-    <link rel="stylesheet" href="../css/common.css" />
-    <link rel="stylesheet" href="../css/region.css" />
+    <link rel="stylesheet" th:href="@{/css/reset.css}" />
+    <link rel="stylesheet" th:href="@{/css/common.css}" />
+    <link rel="stylesheet" th:href="@{/css/region.css}" />
   </head>
   <body>
-    <div id="header"></div>
+    <div id="header" th:insert="~{fragment/header::header}"></div>
     <div id="wrapper">
       <h2 class="page-title">일본의 지역</h2>
       <ul id="regions-list">
         <li class="hokkaido">
-          <a href="#">
+          <a href="/region/hokkaido">
             <img
-              src="../resources/images/map_hokkaido.b7b80abd4549.svg"
+              src="/images/map_hokkaido.b7b80abd4549.svg"
               alt="홋카이도"
             />
             <p class="region-name">홋카이도</p>
@@ -30,9 +30,9 @@
           <ul class="cities"></ul>
         </li>
         <li class="tohoku">
-          <a href="#">
+          <a href="/region/tohoku">
             <img
-              src="../resources/images/map_tohoku.23e16b69e32c.svg"
+              src="/images/map_tohoku.23e16b69e32c.svg"
               alt="도호쿠"
             />
             <p class="region-name">도호쿠</p>
@@ -47,9 +47,9 @@
           </ul>
         </li>
         <li class="hokuriku-shinetsu">
-          <a href="#">
+          <a href="/region/hokuriku">
             <img
-              src="../resources/images/map_hokuriku.971b7d8aaf59.svg"
+              src="/images/map_hokuriku.971b7d8aaf59.svg"
               alt="호쿠리쿠 신에쓰"
             />
             <p class="region-name">호쿠리쿠 신에쓰</p>
@@ -63,9 +63,9 @@
           </ul>
         </li>
         <li class="kanto">
-          <a href="./map.html">
+          <a href="/region/kanto">
             <img
-              src="../resources/images/map_kanto.5c4544e53975.svg"
+              src="/images/map_kanto.5c4544e53975.svg"
               alt="간토"
             />
             <p class="region-name">간토</p>
@@ -81,9 +81,9 @@
           </ul>
         </li>
         <li class="tokai">
-          <a href="#">
+          <a href="/region/tokai">
             <img
-              src="../resources/images/map_chubu.5b6f65f92ac3.svg"
+              src="/images/map_chubu.5b6f65f92ac3.svg"
               alt="도카이"
             />
             <p class="region-name">도카이</p>
@@ -97,9 +97,9 @@
           </ul>
         </li>
         <li class="kansai">
-          <a href="#">
+          <a href="/region/kansai">
             <img
-              src="../resources/images/map_kansai.93e83e6aaa46.svg"
+              src="/images/map_kansai.93e83e6aaa46.svg"
               alt="간사이"
             />
             <p class="region-name">간사이</p>
@@ -114,9 +114,9 @@
           </ul>
         </li>
         <li class="chugoku">
-          <a href="#">
+          <a href="/region/chugoku">
             <img
-              src="../resources/images/map_chugoku.702fcee42844.svg"
+              src="/images/map_chugoku.702fcee42844.svg"
               alt="주고쿠"
             />
             <p class="region-name">주고쿠</p>
@@ -130,9 +130,9 @@
           </ul>
         </li>
         <li class="shikoku">
-          <a href="#">
+          <a href="/region/shikoku">
             <img
-              src="../resources/images/map_shikoku.8f9ef0eea1eb.svg"
+              src="/images/map_shikoku.8f9ef0eea1eb.svg"
               alt="시코쿠"
             />
             <p class="region-name">시코쿠</p>
@@ -145,9 +145,9 @@
           </ul>
         </li>
         <li class="kyushu">
-          <a href="#">
+          <a href="/region/kyushu">
             <img
-              src="../resources/images/map_kyushu.e2ab055eccbf.svg"
+              src="/images/map_kyushu.e2ab055eccbf.svg"
               alt="규슈"
             />
             <p class="region-name">규슈</p>
@@ -163,9 +163,9 @@
           </ul>
         </li>
         <li class="okinawa">
-          <a href="#">
+          <a href="/region/okinawa">
             <img
-              src="../resources/images/map_okinawa.83b83fa44d8c.svg"
+              src="/images/map_okinawa.83b83fa44d8c.svg"
               alt="오키나와"
             />
             <p class="region-name">오키나와</p>
@@ -175,9 +175,9 @@
       </ul>
     </div>
     <div id="floating-btn"></div>
-    <div id="footer"></div>
-    <script src="../js/util.js"></script>
-    <script src="../js/common.js"></script>
-    <script src="../js/region.js"></script>
+    <div id="footer" th:insert="~{fragment/footer::footer}"></div>
+    <script th:src="@{/js/util.js}"></script>
+    <script th:src="@{/js/common.js}"></script>
+    <script th:src="@{/js/region.js}"></script>
   </body>
 </html>

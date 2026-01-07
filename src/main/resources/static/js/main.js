@@ -2,23 +2,44 @@
 isMainPage = true;
 
 // 간토 지방 클릭 이벤트 href
-const regionKanto = document.getElementsByClassName('kiqJ8lXv0XRSXSa_ThjML')[2];
-
-regionKanto.addEventListener('click', () => {
-  window.location.href = './reviews/map.html';
-});
+//const regionKanto = document.getElementsByClassName('kiqJ8lXv0XRSXSa_ThjML')[2];
+//
+//regionKanto.addEventListener('click', () => {
+//  window.location.href = './reviews/map.html';
+//});
 
 const hashs = document.querySelectorAll('#hash-div p');
-const seasons = document.querySelectorAll('#hash-season p');
+const reviewUl = document.getElementById('review-ul');
 
-hashs.forEach((hash, i) => {
+async function loadReviews(hashtag, clickedHash) {
+  hashs.forEach(h => h.classList.remove('active'));
+  if (clickedHash) clickedHash.classList.add('active');
+
+  try {
+    const response = await fetch(
+      '/review/?hashtag=' + encodeURIComponent(hashtag)
+    );
+    const html = await response.text();
+    reviewUl.innerHTML = html;
+  } catch (e) {
+    console.error(e);
+  }
+}
+
+hashs.forEach(hash => {
   hash.addEventListener('click', () => {
-    hashs.forEach((review) => {
-      review.classList.remove('active');
-    });
-    hashs[i].classList.add('active');
+    loadReviews(hash.dataset.hash, hash);
   });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const defaultHash = document.querySelector('#hash-div p[data-hash="맛집"]');
+  if (defaultHash) {
+    loadReviews('맛집', defaultHash);
+  }
+});
+
+
 
 seasons.forEach((season, i) => {
   season.addEventListener('click', () => {

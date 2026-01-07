@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ICHITABI - 당신의 가장 좋았던 일본을 공유해주세요</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" th:href="@{/css/reset.css}" />
+    <link rel="stylesheet" th:href="@{/css/common.css}" />
+    <link rel="stylesheet" th:href="@{/css/review_map.css}" />
+    <link rel="stylesheet" th:href="@{/css/reviews_list.css}" />
+  </head>
+  <body>
+    <div id="header" th:insert="~{fragment/header::header}"></div>
+    <block th:if="${carouselImages != null}">
+      <div id="region-photo">
+        <div class="carousel">
+          <ul class="carousel-item">
+            <li th:each="img : ${carouselImages}">
+              <img th:src="${img}" th:alt="${img}" />
+            </li>
+          </ul>
+        </div>
+        <p id="region-name" th:text="${regionName}"></p>
+        <p id="region-title" th:text="${introMessage}"></p>
+      </div>
+    </block>
+
+    <div id="location">
+      <ul>
+        <li class="btn-home">
+          <a href="/">홈</a>
+        </li>
+        <li class="seperator">
+          <p>&gt;</p>
+        </li>
+        <li class="btn-region">
+          <a href="/region/list">일본의 지역</a>
+        </li>
+        <li class="seperator">
+          <p>&gt;</p>
+        </li>
+        <li class="location-detail">
+          <a href="/japanMap">일본 전국</a>
+        </li>
+        <li class="seperator">
+          <p>&gt;</p>
+        </li>
+        <li>
+          <block th:if="${regionName != null}">
+            <p th:text="${regionName}"></p>
+          </block>
+        </li>
+      </ul>
+    </div>
+    <div id="wrapper-region">
+      <!-- S. 세부 지역 지도 영역 -->
+      <th:block th:if="${mapFragment != null && mapFragment.length > 0}">
+        <div id="map"
+             th:replace="~{${mapFragment} :: map}">
+        </div>
+      </th:block>
+      <!-- E. 세부 지역 지도 영역 -->
+      <!-- S. 세부 지역 게시글 영역 -->
+      <div id="reviews">
+        <h2 th:text="${regionName} + '의 추천 여행지'"></h2>
+        <div id="review-div">
+          <ul>
+            <li class="review-list">
+              <a href="/review/detail">
+                <p class="photo">
+                  <img
+                    src="/images/reviewList01.jpeg"
+                    alt="마루시치 긴자점"
+                  />
+                </p>
+                <p class="age">30대 남성</p>
+                <p class="title">마루시치 긴자점</p>
+                <p class="place">도쿄도 주오구</p>
+                <p class="hash">#맛집 #카츠동 #돈카츠</p>
+              </a>
+              <p class="favo"><button>찜</button></p>
+            </li>
+            <li class="review-list">
+              <a href="">
+                <p class="photo">
+                  <img
+                    src="/images/reviewList02.jpeg"
+                    alt="긴자 스시 후쿠쥬"
+                  />
+                </p>
+                <p class="age">30대 남성</p>
+                <p class="title">긴자 스시 후쿠쥬(鮨 ふくじゅ)</p>
+                <p class="place">도쿄도 주오구</p>
+                <p class="hash">#맛집 #스시 #오마카세</p>
+              </a>
+              <p class="favo"><button>찜</button></p>
+            </li>
+            <li class="review-list">
+              <a href="">
+                <p class="photo">
+                  <img
+                    src="/images/reviewList03.jpeg"
+                    alt="우설 전문점 네기시 도겐자카점(ねぎし)"
+                  />
+                </p>
+                <p class="age">30대 남성</p>
+                <p class="title">우설 전문점 네기시 도겐자카점(ねぎし)</p>
+                <p class="place">도쿄도 신주쿠구</p>
+                <p class="hash">#맛집 #우설 #체인점</p>
+              </a>
+              <p class="favo"><button>찜</button></p>
+            </li>
+            <li class="review-list">
+              <a href="">
+                <p class="photo">
+                  <img
+                    src="/images/reveiwList07.jpeg"
+                    alt="카사이 린카이 수족관"
+                  />
+                </p>
+                <p class="age">20대 남성</p>
+                <p class="title">카사이 린카이 수족관</p>
+                <p class="place">도쿄도</p>
+                <p class="hash">#노을빛 #인생사진 #수족관</p>
+              </a>
+              <p class="favo"><button>찜</button></p>
+            </li>
+            <li class="review-list">
+              <a href="">
+                <p class="photo">
+                  <img
+                    src="/images/reviewList04.jpeg"
+                    alt="오니버스 커피"
+                  />
+                </p>
+                <p class="age">20대 여성</p>
+                <p class="title">onibuscoffee (오니버스 커피)</p>
+                <p class="place">메구로구</p>
+                <p class="hash">#도쿄카페 #나카메구로 #드립커피</p>
+              </a>
+              <p class="favo"><button>찜</button></p>
+            </li>
+            <li class="review-list">
+              <a href="">
+                <p class="photo">
+                  <img
+                    src="/images/reviewList05.jpeg"
+                    alt="spring valley brewery"
+                  />
+                </p>
+                <p class="age">20대 여성</p>
+                <p class="title">
+                  spring valley brewery (スプリングバレーブルワリー東京)
+                </p>
+                <p class="place">시부야구</p>
+                <p class="hash">#도쿄맥주 #다이칸야마 #브루어리</p>
+              </a>
+              <p class="favo"><button>찜</button></p>
+            </li>
+            <li class="review-list">
+              <a href="">
+                <p class="photo">
+                  <img
+                    src="/images/reviewList06.jpeg"
+                    alt="bellustar"
+                  />
+                </p>
+                <p class="age">20대 여성</p>
+                <p class="title">bellustar</p>
+                <p class="place">신주쿠구</p>
+                <p class="hash">#도쿄야경 #벨루스타도쿄 #칵테일</p>
+              </a>
+              <p class="favo"><button>찜</button></p>
+            </li>
+            <li class="review-list">
+              <a href="">
+                <p class="photo">
+                  <img
+                    src="/images/reviewList08.png"
+                    alt="요요기공원(代々木公園)"
+                  />
+                </p>
+                <p class="age">20대 남성</p>
+                <p class="title">요요기공원(代々木公園)</p>
+                <p class="place">도쿄도</p>
+                <p class="hash">#공원 #산책 #운동</p>
+              </a>
+              <p class="favo"><button>찜</button></p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- E. 세부 지역 게시글 영역 -->
+    </div>
+    <div id="floating-btn"></div>
+    <div id="footer" th:insert="~{fragment/footer::footer}"></div>
+    <script th:src="@{/js/util.js}"></script>
+    <script th:src="@{/js/common.js}"></script>
+    <script th:src="@{/js/review_map.js}"></script>
+    <script th:src="@{/js/reviews_list.js}"></script>
+  </body>
+</html>
