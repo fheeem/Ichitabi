@@ -76,7 +76,6 @@
   font-family: Georgia, proxima-nova, sans-serif;
   font-weight: 700;
   font-style: italic;
-  transition: ease fill 0.2s;
   fill: #696969;
   stroke: none;
   cursor: pointer;
@@ -93,8 +92,6 @@
   cursor: pointer;
 }
 
-<<<<<<< HEAD
-=======
 .JT4owTP65shYGJp28lMnd:hover,
 ._2Fpqnq8TrxHxTPEdTec-DJ:hover {
   font-weight: 900;
@@ -102,7 +99,6 @@
   transition: fill 0.2s ease;
 }
 
->>>>>>> origin/dev
 .kiqJ8lXv0XRSXSa_ThjML {
   fill: #cedeff;
   stroke: #ffffff;
@@ -138,13 +134,6 @@
   color: #121212;
 }
 
-<<<<<<< HEAD
-.kiqJ8lXv0XRSXSa_ThjML:hover {
-  fill: #ffe2e5;
-}
-
-=======
->>>>>>> origin/dev
 #reviews {
   margin-bottom: 60px;
 }

@@ -74,14 +74,6 @@
   width: 18px;
   height: 18px;
   margin-top: 3px;
-<<<<<<< HEAD
-  background-image: url('../resources/icons/home.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  text-indent: -999999px;
-}
-
-=======
   background: url('/icons/home.png') no-repeat center / cover;
   opacity: 0.6;
   text-indent: -9999px;
@@ -102,7 +94,6 @@
 /* =========================
    Region Wrapper
 ========================= */
->>>>>>> origin/dev
 #wrapper-region {
   width: 1200px;
   margin: 0 auto;
