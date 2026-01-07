@@ -11,9 +11,6 @@
   margin-bottom: 200px;
   color: #212121;
 }
-
-
-#login-container input[type='email'],
 #login-container input[type='text'],
 #login-container input[type='password'] {
   width: 500px;
@@ -27,7 +24,7 @@
   box-sizing: border-box;
 }
 
-#login-container input[type='email'] {
+#login-container input[type='text'] {
   margin-bottom: 16px;
 }
 #login-container input[type='password'] {
@@ -47,11 +44,11 @@
   cursor: pointer;
 }
 .pw-toggle-btn.hidden {
-  background-image: url('/icons/hidden.png');
+  background-image: url('/resources/icons/hidden.png');
 }
 
 .pw-toggle-btn.visible {
-  background-image: url('/icons/eye.png');
+  background-image: url('/resources/icons/eye.png');
 }
 
 .checkbox-container {
