@@ -10,31 +10,45 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" th:href="@{/css/reset.css}" />
-    <link rel="stylesheet" th:href="@{/css/common.css}" />
-    <link rel="stylesheet" th:href="@{/css/reviews_list.css}" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/reviews_list.css" />
   </head>
   <body>
-    <div id="header" th:insert="~{fragment/header::header}"></div>
+    <div id="header"></div>
     <div id="wrapper">
       <div id="bread-crumb">
-        <p><img th:src="@{/icons/home.png}" alt="home" id="home" /></p>
+        <p><img src="../resources/icons/home.png" alt="home" id="home" /></p>
         <p>></p>
         <p id="recommend">여행지 추천</p>
       </div>
       <div id="review-div">
-          <ul id="review-ul">
-            <th:block th:replace="~{fragment/review_item_list :: reviewList(${reviewList})}">
-            </th:block>
-          </ul>
+        <ul id="review-ul"></ul>
       </div>
       <div id="more-btn"><button>더 보기</button></div>
     </div>
     <div id="floating-btn"></div>
-    <div id="footer" th:insert="~{fragment/footer::footer}"></div>
-    <script type="module" th:src="@{/js/reviews_list.js}"></script>
-    <script th:src="@{/js/review_item.js}"></script>
-    <script th:src="@{/js/common.js}"></script>
-    <script th:src="@{/js/util.js}"></script>
+    <div id="footer"></div>
+
+    <template id="reviews-template">
+      <li class="review-list">
+        <a href="">
+          <p>
+            <img class="photo" />
+          </p>
+          <div class="age-gender">
+            <p class="age"></p>
+            <p class="gender"></p>
+          </div>
+          <p class="title"></p>
+          <p class="place"></p>
+          <p class="hash"></p>
+        </a>
+        <p class="favo"><button>찜</button></p>
+      </li>
+    </template>
+    <script type="module" src="../js/reviews_list.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/util.js"></script>
   </body>
 </html>
